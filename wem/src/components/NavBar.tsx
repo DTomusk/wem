@@ -10,7 +10,7 @@ export default function NavBar() {
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                    <Typography variant="h4">WEM</Typography>
+                    <Typography variant="h4">W</Typography>
                     <ThemeToggle />
                 </Toolbar>
             </AppBar>

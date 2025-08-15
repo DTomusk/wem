@@ -1,0 +1,9 @@
+{
+    "Common": {
+        "lightMode": "Hellmodus",
+        "darkMode": "Dunkelmodus"
+    },
+    "WemPage": {
+        "CTA": "Du musst auf die WEM-Schaltfläche klicken!"
+    }
+}
