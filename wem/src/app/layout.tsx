@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Container } from "@mui/material";
-import Nav from "../components/Nav";
-import ThemeRegistry from "../components/ThemeRegistry";
+import ClientLayout from "../components/ClientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,17 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeRegistry defaultMode="light">
-          <Nav />
-          <Container maxWidth="md" sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}>
+          <ClientLayout>
             {children}
-          </Container>
-        </ThemeRegistry>
+          </ClientLayout>
       </body>
     </html>
   );
