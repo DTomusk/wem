@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Container } from "@mui/material";
-import Nav from "../components/Nav";
+import NavBar from "../components/NavBar";
 import ThemeRegistry from "../components/ThemeRegistry";
 
 const geistSans = Geist({
@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeRegistry defaultMode="light">
-          <Nav />
+          <NavBar />
           <Container maxWidth="md" sx={{
             display: "flex",
             flexDirection: "column",
