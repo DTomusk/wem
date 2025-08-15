@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Container } from "@mui/material";
-import NavBar from "../components/NavBar";
-import ThemeRegistry from "../components/ThemeRegistry";
+import "../globals.css";
+import ThemeRegistry from "../../components/ThemeRegistry";
+import LayoutWrapper from "@/src/components/LayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,26 +19,23 @@ export const metadata: Metadata = {
   description: "Join the wem-olution",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
-  return (
-    <html lang="en">
+  const messages = (await import(`../../locales/${params.locale}.json`)).default;
+    return (
+    <html lang={params.locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeRegistry defaultMode="light">
-          <NavBar />
-          <Container maxWidth="md" sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}>
+          <LayoutWrapper locale={params.locale} messages={messages}>
             {children}
-          </Container>
+          </LayoutWrapper>
         </ThemeRegistry>
       </body>
     </html>
