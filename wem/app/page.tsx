@@ -1,5 +1,5 @@
 "use client";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Box } from "@mui/material";
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
       <Typography variant="h2" sx={{
         textAlign: "center",
         marginBottom: 4,
-      }}>You have to click the wem button!</Typography>
+      }}>You have to click the <Box component="span" sx={{ color: 'primary.main', fontWeight: 'bold' }}>wem</Box> button!</Typography>
       <Button variant="contained" color="primary" sx={{
         width: "60%",
         height: "100px",
