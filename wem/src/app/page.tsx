@@ -12,7 +12,7 @@ export default function Home() {
       <Button variant="contained" color="primary" sx={{
         width: "60%",
         height: "100px",
-        fontSize: "2rem",
+        fontSize: "3rem",
         fontWeight: "bold",
         borderRadius: "10px",
       }}>
