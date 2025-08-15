@@ -1,4 +1,5 @@
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
     return (
@@ -6,6 +7,7 @@ export default function Nav() {
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h4">WEM</Typography>
+                    <ThemeToggle />
                 </Toolbar>
             </AppBar>
         </Box>
