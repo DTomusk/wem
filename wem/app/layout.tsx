@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Container maxWidth="lg" sx={{
+        <Container maxWidth="md" sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
