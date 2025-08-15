@@ -22,12 +22,6 @@ export const metadata: Metadata = {
   description: "Join the wem-olution",
 };
 
-export function generateStaticParams() {
-  return [
-    { locale: 'en' },
-  ];
-}
-
 export default async function RootLayout({
   children,
   params,

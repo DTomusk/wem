@@ -1,3 +1,9 @@
 {
-    "title": "WEM"
+    "Common": {
+        "lightMode": "Light Mode",
+        "darkMode": "Dark Mode"
+    },
+    "WemPage": {
+        "CTA": "You have to click the WEM button!"
+    }
 }
