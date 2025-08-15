@@ -1,11 +1,13 @@
 "use client";
-import { Switch } from "@mui/material";
+import { FormControlLabel, Switch } from "@mui/material";
 import { useThemeMode } from "./ThemeRegistry";
 
 export default function ThemeToggle() {
     const { mode, toggleTheme } = useThemeMode();
 
     return (
-        <Switch onClick={toggleTheme} checked={mode === 'dark'} />
+        <FormControlLabel control={
+            <Switch onClick={toggleTheme} checked={mode === 'dark'} />} 
+            label={mode === 'dark' ? 'Light Mode' : 'Dark Mode'} />
     )
 }
