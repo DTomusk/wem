@@ -5,5 +5,11 @@
     },
     "WemPage": {
         "CTA": "Du musst auf die WEM-Schaltfläche klicken!"
+    },
+    "SignupForm": {
+        "signup": "Registrieren",
+        "email": "Email",
+        "password": "Passwort",
+        "confirmPassword": "Passwort bestätigen"
     }
 }
