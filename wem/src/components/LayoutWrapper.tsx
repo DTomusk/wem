@@ -4,15 +4,16 @@ import NavBar from "./NavBar";
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
     return (
         <>
-                <NavBar />
-                <Container maxWidth="md" sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                }}>
-                    {children}
-                </Container>
+            <NavBar />
+            <Container maxWidth="md" sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: 8,
+            }}>
+                {children}
+            </Container>
         </>
     )
 }   
