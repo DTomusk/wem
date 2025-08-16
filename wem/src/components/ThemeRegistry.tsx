@@ -6,7 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 // These are the possible themes, we could add more here
-type ThemeMode = "light" | "dark";
+export type ThemeMode = "light" | "dark";
 
 interface ThemeContextType {
     mode: ThemeMode;

@@ -10,6 +10,8 @@ export default function ThemeToggle() {
     return (
         <FormControlLabel control={
             <Switch onClick={toggleTheme} checked={mode === 'dark'} />} 
-            label={mode === 'dark' ? t("lightMode") : t("darkMode")} />
+            label={mode === 'dark' ? t("lightMode") : t("darkMode")} 
+            labelPlacement="start"
+            />
     )
 }
