@@ -13,6 +13,11 @@
         "confirmPassword": "Confirm Password",
         "passwordsDoNotMatch": "Passwords do not match",
         "passwordTooShort": "Password must be at least 6 characters",
-        "invalidEmail": "Invalid email address"
+        "invalidEmail": "Invalid email address",
+        "passwordRequired": "Password is required",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMustContainUppercase": "Password must contain at least one uppercase letter",
+        "passwordMustContainNumber": "Password must contain at least one number",
+        "passwordMustContainSpecialCharacter": "Password must contain at least one special character (@$!%*?&)"
     }
 }

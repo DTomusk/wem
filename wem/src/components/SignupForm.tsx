@@ -12,8 +12,13 @@ export default function SignupForm() {
 
   const schema = z.object({
     email: z.email({error: t("invalidEmail")}),
-    password: z.string().min(6, t("passwordTooShort")),
-    confirmPassword: z.string().min(6, t("passwordTooShort")),
+    password: z
+      .string({ error: t("passwordRequired") })
+      .min(6, { error: t("passwordTooShort") })
+      .regex(/[A-Z]/, { message: t("passwordMustContainUppercase") })
+      .regex(/[0-9]/, { message: t("passwordMustContainNumber") })
+      .regex(/[@$!%*?&]/, { message: t("passwordMustContainSpecialCharacter") }),
+    confirmPassword: z.string({ error: t("confirmPasswordRequired") }),
   }).refine((data) => data.password === data.confirmPassword, {
     path: ["confirmPassword"],
     message: t("passwordsDoNotMatch"),
