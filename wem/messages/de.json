@@ -10,6 +10,9 @@
         "signup": "Registrieren",
         "email": "Email",
         "password": "Passwort",
-        "confirmPassword": "Passwort bestätigen"
+        "confirmPassword": "Passwort bestätigen",
+        "passwordsDoNotMatch": "Passwörter stimmen nicht überein",
+        "passwordTooShort": "Passwort muss mindestens 6 Zeichen lang sein",
+        "invalidEmail": "Ungültige E-Mail-Adresse"
     }
 }
