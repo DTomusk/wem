@@ -1,5 +1,4 @@
 "use client";
-
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -7,6 +6,8 @@ import { TextField, Button, Paper, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 
 export default function SignupForm() {
+
+    const minPasswordLength = 12;
     
   const t = useTranslations("SignupForm");
 
@@ -14,7 +15,7 @@ export default function SignupForm() {
     email: z.email({error: t("invalidEmail")}),
     password: z
       .string({ error: t("passwordRequired") })
-      .min(6, { error: t("passwordTooShort") })
+      .min(minPasswordLength, { error: t("passwordTooShort", { min: minPasswordLength }) })
       .regex(/[A-Z]/, { message: t("passwordMustContainUppercase") })
       .regex(/[0-9]/, { message: t("passwordMustContainNumber") })
       .regex(/[@$!%*?&]/, { message: t("passwordMustContainSpecialCharacter") }),

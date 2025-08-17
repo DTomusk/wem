@@ -12,7 +12,7 @@
         "password": "Passwort",
         "confirmPassword": "Passwort bestätigen",
         "passwordsDoNotMatch": "Passwörter stimmen nicht überein",
-        "passwordTooShort": "Passwort muss mindestens 6 Zeichen lang sein",
+        "passwordTooShort": "Passwort muss mindestens {min} Zeichen lang sein",
         "invalidEmail": "Ungültige E-Mail-Adresse",
         "passwordRequired": "Passwort ist erforderlich",
         "confirmPasswordRequired": "Bitte bestätigen Sie Ihr Passwort",

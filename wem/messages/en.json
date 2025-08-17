@@ -12,7 +12,7 @@
         "password": "Password",
         "confirmPassword": "Confirm Password",
         "passwordsDoNotMatch": "Passwords do not match",
-        "passwordTooShort": "Password must be at least 6 characters",
+        "passwordTooShort": "Password must be at least {min} characters",
         "invalidEmail": "Invalid email address",
         "passwordRequired": "Password is required",
         "confirmPasswordRequired": "Please confirm your password",
