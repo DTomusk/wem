@@ -4,12 +4,6 @@ Join the wem-olution
 ## Docker 
 Run 
 
-`docker build -t wem .`
+To run the app, postgres, and pgadmin, run the following from the wem folder:
 
-in the root folder to build the app with docker 
-
-Run
-
-`docker run -p 3000:3000 wem`
-
-to run the app via docker.
+`docker compose up -d --build`
