@@ -1,6 +1,6 @@
 "use server";
 
-import { createUser, getUserByEmail } from "../../lib/db/user";
+import { createUser, getUserByEmail } from "../lib/db/user";
 
 export async function registerUser(email: string, passwordHash: string) {
   const existingUser = await getUserByEmail(email);
