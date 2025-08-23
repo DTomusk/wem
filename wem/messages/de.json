@@ -5,5 +5,19 @@
     },
     "WemPage": {
         "CTA": "Du musst auf die WEM-Schaltfläche klicken!"
+    },
+    "SignupForm": {
+        "signup": "Registrieren",
+        "email": "Email",
+        "password": "Passwort",
+        "confirmPassword": "Passwort bestätigen",
+        "passwordsDoNotMatch": "Passwörter stimmen nicht überein",
+        "passwordTooShort": "Passwort muss mindestens {min} Zeichen lang sein",
+        "invalidEmail": "Ungültige E-Mail-Adresse",
+        "passwordRequired": "Passwort ist erforderlich",
+        "confirmPasswordRequired": "Bitte bestätigen Sie Ihr Passwort",
+        "passwordMustContainUppercase": "Passwort muss mindestens eine Großbuchstaben enthalten",
+        "passwordMustContainNumber": "Passwort muss mindestens eine Zahl enthalten",
+        "passwordMustContainSpecialCharacter": "Passwort muss mindestens ein Sonderzeichen enthalten (@$!%*?&)"
     }
 }
