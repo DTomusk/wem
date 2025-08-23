@@ -5,9 +5,12 @@ import { z } from "zod";
 import { TextField, Button, Paper, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { createSignupFormSchema } from "../lib/definitions";
-import { registerUser } from "../actions/user";
 
-export default function SignupForm() {
+export default function SignupForm({ registerUser }: { registerUser: (email: string, password: string) => Promise<{
+    email: string;
+    id: number;
+    passwordHash: string;
+}> }) {
     const t = useTranslations<"SignupForm">("SignupForm");
     const schema = createSignupFormSchema(t);
   

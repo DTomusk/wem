@@ -15,9 +15,5 @@ COPY . .
 # Expose port (default for Next.js)
 EXPOSE 3000
 
-FROM base AS dev
-CMD ["npm", "run", "dev"]
-
-FROM base AS prod
 RUN npm run build
 CMD ["npm", "run", "start"]
