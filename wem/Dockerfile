@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install dependencies first (better caching)
 COPY package*.json prisma ./
-RUN npm install --frozen-lockfile
+RUN npm ci
 RUN npx prisma generate
 
 # Copy the rest of the project
@@ -19,6 +19,5 @@ FROM base AS dev
 CMD ["npm", "run", "dev"]
 
 FROM base AS prod
-# Build Next.js app
 RUN npm run build
 CMD ["npm", "run", "start"]

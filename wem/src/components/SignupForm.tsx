@@ -5,6 +5,7 @@ import { z } from "zod";
 import { TextField, Button, Paper, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import { createSignupFormSchema } from "../lib/definitions";
+import { registerUser } from "../actions/user";
 
 export default function SignupForm() {
     const t = useTranslations<"SignupForm">("SignupForm");
@@ -20,8 +21,10 @@ export default function SignupForm() {
         resolver: zodResolver(schema),
     });
 
-    const onSubmit = (data: FormData) => {
+    const onSubmit = async (data: FormData) => {
+        const user = await registerUser(data.email, data.password);
         console.log("Form submitted:", data);
+        console.log("User created:", user);
     };
 
     return (
